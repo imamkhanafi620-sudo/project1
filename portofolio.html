@@ -1,0 +1,252 @@
+<html>
+<head>
+  <title>Imam Khanafi's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f6ff;
+      color: #333;
+    }
+
+    /* ==== HEADER / HERO ==== */
+    header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .typing {
+      border-right: 3px solid white;
+      display: inline-block;
+      animation: blink 0.7s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* ==== NAVBAR ==== */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      color: #131648;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #4e54c8;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* ==== SECTIONS ==== */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #181b59;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    /* ==== CARDS ==== */
+    .project, .skill-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover, .skill-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #0e114f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .project a:hover {
+      background: #0e0f41;
+    }
+
+    /* ==== SKILLS ==== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-card {
+      text-align: center;
+    }
+
+    /* ==== CONTACT ==== */
+    #contact {
+      text-align: center;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      border-radius: 25px;
+      background: #0a0c34;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: #020439;
+      transform: translateY(-3px);
+    }
+
+    .socials i {
+      margin-right: 8px;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Imam Khanafi</h1>
+  <p class="typing">UI/UX Enthusiast & Web Developer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a student with a passion for UI/UX design and modern web development. I enjoy building interactive, clean, and responsive websites.</p>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project">
+    <h3>Online Store Website</h3>
+    <p>Built an e-commerce website using HTML, CSS, and JavaScript.</p>
+    <a href="#">View Project</a>
+  </div>
+  <div class="project">
+    <h3>To-Do List App</h3>
+    <p>Task app with add, delete, and complete features, developed in JavaScript.</p>
+    <a href="#">View Project</a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>HTML & CSS</h4>
+      <p>Responsive layout, Flexbox, Grid</p>
+    </div>
+    <div class="skill-card">
+      <h4>UI/UX</h4>
+      <p>Wireframing, Prototyping</p>
+    </div>
+    <div class="skill-card">
+      <h4>Figma</h4>
+      <p>Design & Collaboration</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="socials">
+    <a href="https://www.instagram.com/immkhanafiii" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="mailto:imamkhanafi620@email.com"><i class="fas fa-envelope"></i>Email</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Imam Khanafi. All Rights Reserved.
+</footer>
+
+<script>
+  // Scroll animation effect
+  const sections = document.querySelectorAll('section');
+  const revealOnScroll = () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if(top < window.innerHeight - 100) {
+        sec.classList.add('show');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // run on load
+</script>
+</body>
+</html>
